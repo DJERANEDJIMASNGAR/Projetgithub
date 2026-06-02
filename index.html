@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionnaire de Tâches Avancé - To-do List Pro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="conteneur">
+        <h1>Gestionnaire de Tâches Avancé</h1>
+
+        <!-- Ajout -->
+        <div class="formulaire-ajout">
+            <input type="text" id="nouvelle-tache" placeholder="Entrez une nouvelle tâche..." autocomplete="off">
+            <button id="bouton-ajouter">Ajouter</button>
+        </div>
+        
+           <div id="message-erreur" class="message-erreur">
+                  Veuillez remplir le champ !
+           </div>
+
+        <!-- Filtres -->
+        <div class="filtres">
+            <label>Filtrer :</label>
+            <select id="filtre-statut">
+                <option value="toutes">Toutes</option>
+                <option value="completes">Complètes</option>
+                <option value="incompletes">Incomplètes</option>
+            </select>
+            <input type="text" id="recherche-tache" placeholder="Rechercher une tâche...">
+        </div>
+
+        <!-- Liste des tâches -->
+        <ul id="liste-taches"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
