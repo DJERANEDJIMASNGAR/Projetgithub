@@ -2,11 +2,11 @@
 let listeTaches = [];
 
 // ÉLÉMENTS DU DOM
-const inputTache      = document.getElementById('nouvelle-tache');
-const btnAjouter      = document.getElementById('bouton-ajouter');
-const selectFiltre    = document.getElementById('filtre-statut');
-const inputRecherche  = document.getElementById('recherche-tache');
-const listeTachesEl   = document.getElementById('liste-taches');
+const inputTache = document.getElementById('nouvelle-tache');
+const btnAjouter = document.getElementById('bouton-ajouter');
+const selectFiltre = document.getElementById('filtre-statut');
+const inputRecherche = document.getElementById('recherche-tache');
+const listeTachesEl = document.getElementById('liste-taches');
 
 // CHARGEMENT INITIAL
 function chargerTaches() {
@@ -48,8 +48,8 @@ function afficherTaches() {
 
     const tachesFiltrees = listeTaches.filter(tache => {
         const matchTexte = tache.texte.toLowerCase().includes(recherche);
-        if (filtre === 'completes')    return tache.complete && matchTexte;
-        if (filtre === 'incompletes')  return !tache.complete && matchTexte;
+        if (filtre === 'completes') return tache.complete && matchTexte;
+        if (filtre === 'incompletes') return !tache.complete && matchTexte;
         return matchTexte;
     });
 
@@ -91,7 +91,7 @@ function ajouterTache() {
     inputTache.focus();
 }
 
-/// GESTION DES CLICS SUR LES BOUTONS (délégation)
+
 listeTachesEl.addEventListener('click', (e) => {
     const btn = e.target;
     if (!btn.matches('button')) return;
@@ -104,7 +104,7 @@ listeTachesEl.addEventListener('click', (e) => {
         const confirmation = confirm(`Voulez-vous vraiment supprimer la tâche :\n"${listeTaches[index].texte}" ?`);
 
         if (confirmation) {
-            listeTaches.splice(index, 1);  
+            listeTaches.splice(index, 1);
             sauvegarderTaches();
             afficherTaches();
         }
@@ -140,3 +140,6 @@ inputRecherche.addEventListener('input', afficherTaches);
 // INITIALISATION
 chargerTaches();
 afficherTaches();
+
+
+console.log("le travail bien te donne la force");
