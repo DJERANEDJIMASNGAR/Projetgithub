@@ -130,14 +130,32 @@ h1 {
     transition: all 0.2s;
 }
 
-.bouton-completer { background: #3498db; color: white; }
-.bouton-completer:hover { background: #2980b9; }
+.bouton-completer {
+    background: #3498db;
+    color: white;
+}
 
-.bouton-modifier  { background: #f39c12; color: white; }
-.bouton-modifier:hover  { background: #e67e22; }
+.bouton-completer:hover {
+    background: #2980b9;
+}
 
-.bouton-supprimer { background: #e74c3c; color: white; }
-.bouton-supprimer:hover { background: #c0392b; }
+.bouton-modifier {
+    background: #f39c12;
+    color: white;
+}
+
+.bouton-modifier:hover {
+    background: #e67e22;
+}
+
+.bouton-supprimer {
+    background: #e74c3c;
+    color: white;
+}
+
+.bouton-supprimer:hover {
+    background: #c0392b;
+}
 
 
 .message-erreur {
