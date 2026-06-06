@@ -142,4 +142,3 @@ chargerTaches();
 afficherTaches();
 
 
-console.log("le travail bien te donne la force");
