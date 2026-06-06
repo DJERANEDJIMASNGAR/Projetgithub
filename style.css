@@ -150,7 +150,7 @@ h1 {
 
 .bouton-supprimer {
     background: #e74c3c;
-    color: rgb(214, 181, 181);
+    color: white;
 }
 
 .bouton-supprimer:hover {
@@ -166,4 +166,14 @@ h1 {
     margin: 10px 0;
     text-align: center;
     display: none;
+}
+
+/* Amélioration accessibilité: focus visible pour les boutons et inputs */
+button:focus,
+#bouton-ajouter:focus,
+#nouvelle-tache:focus,
+.filtres select:focus,
+#recherche-tache:focus {
+    outline: 3px solid rgba(52, 152, 219, 0.25);
+    outline-offset: 2px;
 }
